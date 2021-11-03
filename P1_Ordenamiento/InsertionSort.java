@@ -23,7 +23,7 @@ public class InsertionSort {
 			array[j + 1] = key;				// ahora nuestro nuevo elemento 0 o en primera posicion sera el q comparamos
 		}	
 		
-    for (int i = 0; i < array.length; ++i)
-      System.out.print(array[i] + " ");
+    		for (int i = 0; i < array.length; ++i)
+      			System.out.print(array[i] + " ");
 	}
 }
