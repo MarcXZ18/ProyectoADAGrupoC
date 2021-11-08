@@ -2,17 +2,23 @@ public class InsertionSort {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int array[] = {24, 3, 15, 6, 5, 11, 16, 8};
-		insertionSort(array);	
+		// TODO Auto-generated method stub
+		InsertionSort<Integer> Met1 = new InsertionSort<Integer>();
+		Integer array[] = {24, 3, 15, 6, 5, 11, 16, 8};		
+		Met1.insertionSort(array);	
+		
+		for (int i = 0; i < array.length; i++)
+  			System.out.print(array[i] + " ");
 		
 	}
 	
 	// Dado un arreglo de elementos que estan
 	// desordenados creara otro arreglo ordenado	
 	// con el metodo de ordenamiento insertionsort
-	public static void insertionSort(int array[]) {
-		int key, j;
-		for (int i = 1; i < array.length; ++i) {
+	public static <T extends Comparable<T>> void insertionSort(T array[]) {
+		T key;
+		int j;
+		for (int i = 1; i < array.length; i++) {
 			key = array[i];  // este sera el primero numero a comparar
 			j = i - 1;       // j=0
 			while (j >= 0 && array[j] > key) { // siempre que el primer elemento del array sea mayor
